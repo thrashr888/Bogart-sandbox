@@ -4,13 +4,17 @@ Bogart: Sinatra for PHP
 
 This is Bogart, Sinatra for PHP. We can't be as consise as Ruby, but can at least try.
 
-You can find the Bogart code here:  
+You can find the Bogart library code here:  
 [https://github.com/thrashr888/Bogart](https://github.com/thrashr888/Bogart)
+
+Place the Bogart library code into ``vendor/Bogart``.
+
+Set your docroot to ``/public`` and point your browser to [http://localhost/](http://localhost/).
 
 Examples
 -------
 
-- ``index.php`` random routes for showing off Bogart's features
+- ``index.php`` routes for showing off Bogart's features
 - ``hello.php`` hello world
 - ``login.php`` log in and log out
 - ``post.php`` blog posts
@@ -62,6 +66,6 @@ Author
 
 Paul Thrasher
 
-http://vastermonster.com
-http://paulthrasher.com
-http://twitter.com/thrashr888
+[http://vastermonster.com](http://vastermonster.com)  
+[http://paulthrasher.com](http://paulthrasher.com)  
+[http://twitter.com/thrashr888](http://twitter.com/thrashr888)

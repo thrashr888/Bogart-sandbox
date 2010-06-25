@@ -6,8 +6,8 @@ require '../lib/Bogart/App.php';
 
 try
 {
-$app = new App('index', 'dev', true);
-$app->run();
+  $app = new App('index', 'dev', true);
+  $app->run();
 }
 catch(\Exception $e)
 {
