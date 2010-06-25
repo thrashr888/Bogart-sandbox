@@ -4,12 +4,26 @@ Bogart: Sinatra for PHP
 
 This is Bogart, Sinatra for PHP. We can't be as consise as Ruby, but can at least try.
 
+Installation
+------------
+
+Try this first:
+
+    git clone git@github.com:thrashr888/Bogart-sandbox.git project_folder
+    cd project_folder
+    
+    git submodule add git@github.com:thrashr888/Bogart.git vendor/Bogart/
+    git submodule init
+    git submodule update --init --recursive
+
 You can find the Bogart library code here:  
 [https://github.com/thrashr888/Bogart](https://github.com/thrashr888/Bogart)
 
 Place the Bogart library code into ``vendor/Bogart``.
 
 Set your docroot to ``/public`` and point your browser to [http://localhost/](http://localhost/).
+
+*This will get easier, I'll update this readme when I get that worked out.*
 
 Examples
 -------
@@ -66,6 +80,7 @@ Author
 
 Paul Thrasher
 
+[http://github.com/thrashr888](http://github.com/thrashr888)  
 [http://vastermonster.com](http://vastermonster.com)  
 [http://paulthrasher.com](http://paulthrasher.com)  
 [http://twitter.com/thrashr888](http://twitter.com/thrashr888)
