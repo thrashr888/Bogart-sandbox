@@ -23,7 +23,7 @@ Place the Bogart library code into ``vendor/Bogart``.
 
 Set your docroot to ``/public`` and point your browser to [http://localhost/](http://localhost/).
 
-*This will get easier, I'll update this readme when I get that worked out.*
+*This will get easier, I'll update this readme when I get that worked out. I'll also add a method that should play nice on shared servers in which the docroot cannot be set.*
 
 Examples
 -------

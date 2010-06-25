@@ -46,7 +46,7 @@ After(function(Request $request)
 
 Get('/', function()
 {
-  return Twig('index');
+
 });
 
 Get('/', array('Accept-Encoding' => 'gzip'), function()

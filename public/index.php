@@ -2,7 +2,7 @@
 
 namespace Bogart;
 
-require '../lib/Bogart/App.php';
+require '../vendor/Bogart/lib/Bogart/App.php';
 
 try
 {
