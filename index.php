@@ -41,22 +41,26 @@ After(function(Request $request)
 
 Get('/', array('Accept-Encoding' => 'gzip'), function()
 {
-  echo 'gzip is accepted!';
+  echo 'gzip accepted.';
   pass();
 });
 
 Get('/', function(Request $request, Response $response, User $user = null)
 {
+  Cache::remove('/index.html');
+  return Twig('index');
   //Config::disable('cache');
   
-  //Timer::write('route::posts', true);
+  /*
+  Timer::write('route::posts', true);
   $new_post = array(
     'title' => 'Title '.Request::$id,
     'body' => 'This is a great post about '.Request::$id.'!',
     'slug' => 'title_'.Request::$id
     );
-  //Store::insert('Posts', $new_post);
-  //Cache::remove('/index.html');
+  Store::insert('Posts', $new_post);
+  Cache::remove('/index.html');
+  */
   
   if($user->hasFlash())
   {
@@ -138,6 +142,8 @@ Template('layout', function()
 });
 
 /*
+Events coming soon...
+
 Event::Listen('custom_error', function(){
   echo 'there was a problem!'."\n";
 });
@@ -155,8 +161,6 @@ Event::Listen('not_found', function(){
   echo 'not found.'."\n";
 });
 */
-
-//Store::coll('cfg')->drop();
 
 include 'hello.php';
 include 'post.php';
