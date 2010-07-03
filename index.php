@@ -10,14 +10,9 @@ namespace Bogart;
 //Config::disable('log');Config::disable('debug');Config::disable('timer');
 //Cache::remove('/index.html');
 
-Config::disable('cache');
+//Config::disable('cache');
 //Config::disable('sessions');
 //Config::enable('dbinit');
-
-include 'hello.php';
-include 'post.php';
-include 'login.php';
-include 'assets.php';
 
 Before(function(Request $request, Response $response)
 {
@@ -40,19 +35,14 @@ After(function(Request $request)
   //exit;
   if($request->format != 'html')
   {
-    Config::disable('debug');
+    Disable('debug');
   }
-});
-
-Get('/', function()
-{
-
 });
 
 Get('/', array('Accept-Encoding' => 'gzip'), function()
 {
   echo 'gzip is accepted!';
-  Router::pass();
+  pass();
 });
 
 Get('/', function(Request $request, Response $response, User $user = null)
@@ -60,11 +50,11 @@ Get('/', function(Request $request, Response $response, User $user = null)
   //Config::disable('cache');
   
   //Timer::write('route::posts', true);
-  /*$new_post = array(
-    'title' => 'Title '.$rand,
+  $new_post = array(
+    'title' => 'Title '.Request::$id,
     'body' => 'This is a great post about '.Request::$id.'!',
-    'slug' => 'title_'.$rand
-    );*/
+    'slug' => 'title_'.Request::$id
+    );
   //Store::insert('Posts', $new_post);
   //Cache::remove('/index.html');
   
@@ -167,3 +157,8 @@ Event::Listen('not_found', function(){
 */
 
 //Store::coll('cfg')->drop();
+
+include 'hello.php';
+include 'post.php';
+include 'login.php';
+include 'assets.php';
