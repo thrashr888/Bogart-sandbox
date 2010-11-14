@@ -14,6 +14,8 @@ namespace Bogart;
 //Config::disable('sessions');
 //Config::enable('dbinit');
 
+Plugin::load(array('Example'));
+
 Before(function(Request $request, Response $response)
 {
   //$response->title = 'Default';
